@@ -1,0 +1,155 @@
+/* media width: 768 이하 부분 시작 */
+
+@media all and (max-width: 768px) {
+
+    /* Header 부분 시작 === */
+    .header {
+        width: 100%;
+        background-color: var(--color-primary);
+
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: start;                 /* 로고이미지와 텍스트 왼쪽 정렬 */
+    }
+        .header_logo {
+            background: transparent;         /* 확인한 뒤 background: transparent; 변경합니다 */
+        }
+
+        .header_nav {
+            width: 100%;                        /* 메뉴 가로 길이 부모의 100% 사용 */
+        }
+
+            .header_menu {
+                display: none;                  /* 검사한 뒤 display: none;으로 변경합니다. */
+                flex-flow: column nowrap;
+                width: 100%;
+
+                background: #f90;      /* 검사한 뒤 background 코드 삭제합니다 */
+                text-align: center;
+                padding: 1rem 4rem;
+                gap: 1rem;
+            }
+            .header_menu.open {          /* javascript에서 .open 클래스를 추가할 때 사용하기 위해서 미리 코딩해 둔 내용입니다. */
+                display: flex;                 /* .open 클래스가 추가되면 메뉴가 화면에 나옵니다. */
+                flex-flow: column nowrap;   /* 코드를 동일하게 한 이유는 코드 이해가 쉽게하기 위해서 입니다. */
+                width: 100%;
+                
+                background: transparent;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                padding: 1rem 4rem;
+                gap: 1rem;
+            }            
+
+        .hamburger {
+            display: block;
+            color: var(--color-white);
+            font-size: 1.5rem;
+            position: absolute;
+            top: 1.4rem;
+            right: 1rem;
+            border: 0;
+        }
+        
+    /* Home 부분 - 변경 사항이 없습니다. */
+    .home_container {
+        background: transparent;   /* 확인한 뒤 background: transparent; 변경합니다 */
+    }
+
+
+    /* About 부분 === */
+    .about_content {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        background: #f90;   /* 공간 확인한 뒤 투명처리 background: transparent; 변경 */
+    }
+    .about_box {
+        width: 100%;
+    }
+
+    /* Skills 부분 === */
+    .skills_content {
+        width: 100%;
+        margin: 2rem auto;
+        display: grid;
+        grid-template-areas: 
+            "a"
+            "b"
+            "c"
+        ;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+        /* 아래 부분은 생략 가능합니다.*/
+        .skills_coding {
+            grid-area: a;
+            padding: 1rem;
+            background-color: var(--color-primary);
+        }
+        .skills_tools {
+            grid-area: b;
+            padding: 1rem;
+            background-color: var(--color-primary);
+            filter: brightness(100%);
+        }
+        .skills_etc {
+            grid-area: c;
+            padding: 1rem;
+            background-color: var(--color-primary);
+            filter: brightness(100%)
+        }
+
+    /* My Work 시작 */
+    .category {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        background: transparent;
+    }
+        .category_button {
+            width: 100%;
+        }
+
+    /* project 8개 시작 (4행 2열로 제작) === */
+    .project_all {
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    /* Testimonial === */
+    .testimonial_all {
+        background: transparent;
+    }
+        .testimonial_each {
+            display: flex;
+            flex-flow: column nowrap;
+        }
+        .testimonial_each:nth-child(even) .testimonial_img {
+            order: 0;
+        }
+
+    /* Top 버튼 시작 */
+    .arrow_up {
+        right: 1rem;
+        bottom: 1rem;
+        transform: scale(0.8);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+}

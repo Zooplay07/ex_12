@@ -1,0 +1,34 @@
+/* footer 시작 */
+#contact {
+    background-color: var(--color-primary);
+}
+
+    .footer_title {
+        color: #f90;
+        cursor: pointer;
+    }
+    .footer_text_01 {
+        color: #fff;
+    }
+
+
+.contact_all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    padding: 1rem;
+    margin-top: 3em;
+    background: #000;
+    border-radius: 20px;
+}
+    .contact_text {
+        margin-top: 0.5em;
+        transition: all 300ms;
+        color: #fff;
+        cursor: pointer;
+    }
+    .contact_text:hover {
+        color: var(--color-accent);
+        cursor: pointer;
+    }
